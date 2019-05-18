@@ -24,7 +24,8 @@ pipeline {
                 systemctl restart tomcat
                 systemctl status tomcat
 EOF
-            }
+'''
+	}
         }
     }
 }
