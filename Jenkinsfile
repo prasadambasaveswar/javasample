@@ -11,5 +11,10 @@ pipeline {
         sh 'mvn clean install'
         }
         }
+        stage('deploy') {
+            steps {
+                sh 'sshpass -p 'lastchance' scp $WORKSPACE/target/*.war root@instance-6:/mnt/
+            }
+        }
     }
 }
