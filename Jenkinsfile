@@ -13,7 +13,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'sshpass -p 'lastchance' scp $WORKSPACE/target/*.war root@instance-6:/mnt/'
+                sh 'sshpass -p 'lastchance' scp ${WORKSPACE}/target/*.war root@instance-6:/mnt/'
             }
         }
     }
